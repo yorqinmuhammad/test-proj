@@ -2,8 +2,8 @@ import numpy as np
 import joblib
 
 # Load model and CountVectorizer
-model = joblib.load('./spam_classifier_model.pkl')
-cv = joblib.load('./count_vectorizer.pkl')
+model = joblib.load('/home/muhammadyorqin/mysite/spam_classifier_model.pkl')
+cv = joblib.load('/home/muhammadyorqin/mysite/count_vectorizer.pkl')
 
 def checkspam(mail: str) -> bool:
     # Example email
