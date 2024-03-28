@@ -37,10 +37,11 @@ def changealph():
 @app.route("/spamcheck", methods=["POST"])
 def spam_checker():
     data = request.get_json()
-    email = data["email"]
     
     if not data or "email" not in data:
         return jsonify({'error': 'Invalid input.'}), 400
+    
+    email = data["email"]
     
     if not email.strip():
         return jsonify({'error': 'Please enter valid mail.'}), 400
